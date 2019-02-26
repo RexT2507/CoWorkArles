@@ -23,6 +23,7 @@ body{
     background-size: cover; /* version standardisĂ©e */
 }
 
+/* a font-family */
 a{
     font-family: 'Source Sans Pro', sans-serif;
     color: inherit;
