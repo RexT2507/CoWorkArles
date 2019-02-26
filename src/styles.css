@@ -1,0 +1,354 @@
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.625;
+    margin: 0;
+    color: #6f6f6f;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background: url(assets/background.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisĂ©e */
+}
+
+a{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: inherit;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.625;
+    margin: 0;
+    color: #6f6f6f;
+}
+
+.header{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92) 15.5%, rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+    url(app/img/baniere-encyclopedie.jpg) center center / cover no-repeat;
+    color: white;
+}
+
+.topbar{
+    padding: 18px 20px;
+    font-size: .875rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menu-item:hover{
+    color: #C89446;
+}
+
+.logo{
+    margin-bottom: 15px;
+}
+
+.logo:hover{
+    color: #C89446;
+}
+
+.menu-item{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.baseline{
+    padding: 50px 0 70px 0;
+    text-align: center;
+    line-height: 1;
+}
+
+.baseline-bienvenue{
+    font-family: 'Source Sans Pro', sans-serif;
+    color:  #C89446;
+    display: block;
+    font-size: 2.2rem;
+} 
+
+.baseline-name{
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.baseline-slogan{
+    font-size: 1rem;
+    font-weight: 300;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu-button{
+    border: solid 1px #C89446;
+    padding: 7px 10px;
+    transition-property: color, background-color;
+    margin-top: 5px;
+}
+
+.menu-button:hover{
+    background: #C89446;
+    color: #FFF;
+}
+
+.home-section{
+    padding-top: 9px;
+}
+
+.container-small{
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 960px;
+}
+
+.block{
+    margin-bottom: 50px;
+}
+
+.block-left{
+    display:block !important;
+    width:100% !important;
+}
+
+.title span{
+    font-family: 'Source Sans Pro', serif;
+    color: #C89446;
+    font-size: 2.5rem;
+    display: block;
+}
+
+.title::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: #C89446;
+    margin-bottom: 15px;
+    margin-bottom: .5rem;
+}
+
+.more{
+    color: #C89446;
+}
+
+.more:hover{
+    text-decoration: underline;
+}
+
+.more::after{
+    content: ' >';
+}
+
+.block-img{
+    border: solid 1px #C89446;
+    height: 100%;
+}
+
+.block-img img{
+    position: relative;
+    z-index: 1;
+}
+
+.title::before{
+    margin-bottom: 20px;
+}
+.more{
+    display: block;
+    margin-top: 1.3rem;
+}
+
+.block-centered{
+    text-align: center;
+}
+
+.map {
+    width: 100%;
+    height: 460px;
+}
+
+.footer {
+    background: #383838 bottom right no-repeat;
+    font-weight: 300;
+    color: #FFF;
+    padding: 40px 0;
+}
+
+.footer-title {
+    color: #C89446;
+    font-weight: bold;
+    text-transform: uppercase; 
+    margin-bottom: 1.25em; 
+}
+
+.footer-column {
+    margin-bottom: 2rem;
+}
+
+
+@media only screen and (min-width: 600px){
+
+    html{
+        font-size: 16px;
+    }
+    .logo{
+        padding-bottom: 0;
+    }
+    .topbar{
+        display: flex;
+        align-items: center;
+        justify-content:  space-between; /* Ã©quivalent de .menu{margin-left: auto;}*/
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+    .baseline{
+        padding: 125px 0 230px;
+    }
+    .baseline-slogan{
+        font-size: 1.5rem;
+    }
+    .baseline-name{
+        font-size: 4.375rem;
+        letter-spacing: 12px;
+        padding-top: 8px;
+        padding-bottom: 17px;
+    }
+    .baseline-bienvenue{
+        font-size: 3.75rem;
+    }
+    .menu-button{
+        margin-top: 0;
+        margin-right: 0;
+    }
+    
+}
+
+@media only screen and (min-width: 960px){
+
+    .block{
+        margin: 100px;
+    }
+    .block-left, .block-right{
+        display: flex;
+        align-items: center;
+    }
+    .block-img{
+        border: none;
+        position: relative;
+    }
+    .block-img::before{
+        content: '';
+        display: block;
+        border: solid 1px #C89446;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    .block-right .block-img::before{
+        left: auto;
+        right: -30px;
+    }
+    .block-left .block-img{
+        width: 350px;
+        flex: none;
+        margin-left: 30px;
+    }
+    .block-left .block-body{
+        margin-left: 94px;
+    }
+    .block-right .block-body{
+        margin-right: 94px;
+        order: -1;
+    }
+    .title::before{
+        margin-bottom: 20px;
+    }
+    .more{
+        display: block;
+        margin-top: 1.3rem;
+    }
+
+    .home-section{
+        background: img();
+    }
+
+    .footer{
+        padding-left: 30px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-column {
+        width: 290px;
+        margin-right: 50px;
+    }
+    
+    .footer-column:first-child {
+        width: 450px;
+    }
+
+    .footer-column:last-child {
+        margin-right: 0;
+        flex: none; 
+    }
+
+    .footer a {
+        text-decoration: underline;
+    }
+
+    .footer a:hover {
+        color: #C89446;
+    }
+    
+    .footer ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .footer ul li::before {
+        content: '- ';
+    }
+
+    .footer-credits {
+        font-size: 0.93em;
+        position: absolute;
+        padding-top: 180px;
+       
+    }
+
+    .footer-credits span {
+        font-weight: bold;
+    }
+
+}
+

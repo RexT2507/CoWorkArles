@@ -1,0 +1,26 @@
+
+<h2>Annuaire</h2>
+
+<!-- <div>
+    <label>name:
+      <input [(ngModel)]="selectedPersonne.first_name, " placeholder="name">
+    </label>
+</div> -->
+
+<ul class="personnes">
+  <li *ngFor="let personne of personnes"
+    [class.selected]="personne === selectedPersonne"
+    (click)="onSelect(personne)">
+    <span class="badge">{{personne.id}}</span> {{personne.first_name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedPersonne">
+
+  <h2>Informations de {{selectedPersonne.first_name}}</h2>
+  <div><span>Nom: </span>{{selectedPersonne.first_name}}</div>
+  <div><span>Prénom: </span>{{selectedPersonne.last_name}}</div>
+  <div><span>Adresse email: </span>{{selectedPersonne.email}}</div>
+
+</div>
+
