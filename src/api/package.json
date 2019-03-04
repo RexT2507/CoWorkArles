@@ -1,0 +1,25 @@
+{
+  "name": "apiptut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "BDDAccess",
+    "REST"
+  ],
+  "author": "Pierre ROMAN",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
+  }
+}

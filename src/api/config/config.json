@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "maBase",
+    "database": "database_development_PTUT",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "maBase",
+    "database": "database_test_PTUT",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "maBase",
+    "database": "database_production_PTUT",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
