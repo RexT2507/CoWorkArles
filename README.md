@@ -1,4 +1,5 @@
 # Projet tutoré Espace CoWorking d'Arles - 2018/2019
+![init_PaysArles](https://github.com/RexTIndominus/CoWorkArles/blob/master/src/assets/initiative_logo.jpg)
 
 ## Présentation du projet
 Initiative Pays d'Arles est une entreprise qui propose un dispositif d’accompagnement et de financement destiné aux porteurs de projet souhaitant créer une entreprise.       
