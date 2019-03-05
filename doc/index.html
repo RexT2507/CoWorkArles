@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="img/favicon.ico">
+
+    
+    <title>Documentation - Coworking - Documentation - Init Pays d'Arles</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/cinder.min.css" rel="stylesheet">
+    <link href="css/highlight.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body class="homepage" >
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href=".">Documentation - Init Pays d'Arles</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#documentation-coworking">Documentation - Coworking</a></li>
+        <li class="first-level "><a href="#i-presentation-du-projet">I.  Présentation du projet</a></li>
+        <li class="first-level "><a href="#ii-les-etudiants-travaillant-sur-le-projet">II. Les étudiants travaillant sur le projet</a></li>
+        <li class="first-level "><a href="#iii-les-langages-utilises">III. Les langages utilisés</a></li>
+        <li class="first-level "><a href="#iv-les-fonctionnalites-attendu">IV.  Les fonctionnalités attendu</a></li>
+        <li class="first-level "><a href="#v-lapi">V. L'API</a></li>
+            <li class="second-level"><a href="#a-les-differentes-routes-de-lapi">a) Les différentes routes de l'API</a></li>
+                
+            <li class="second-level"><a href="#b-extrait-de-code-de-lapi">b) Extrait de code de l'API</a></li>
+                
+            <li class="second-level"><a href="#c-les-codes-de-type-de-droit">c) Les codes de type de droit</a></li>
+                
+        <li class="first-level "><a href="#vi-base-de-donnees">VI. Base de Données</a></li>
+        <li class="first-level "><a href="#vii-page-daccueil">VII. Page d'accueil</a></li>
+            <li class="second-level"><a href="#a-version-ordinateur">a) Version ordinateur</a></li>
+                
+            <li class="second-level"><a href="#b-version-mobile">b) Version mobile</a></li>
+                
+            <li class="second-level"><a href="#c-page-de-connectioncreation">c) Page de connection/création</a></li>
+                
+            <li class="second-level"><a href="#d-espace-personnel-des-adherents">d) Espace personnel des adhérents</a></li>
+                
+            <li class="second-level"><a href="#e-extrait-de-code">e) Extrait de code</a></li>
+                
+            <li class="second-level"><a href="#f-liste-des-modules">f) Liste des modules</a></li>
+                
+        <li class="first-level "><a href="#viii-calendrier">VIII. Calendrier</a></li>
+            <li class="second-level"><a href="#a-adherents">a) Adhérents</a></li>
+                
+            <li class="second-level"><a href="#b-administrateurs">b) Administrateurs</a></li>
+                
+            <li class="second-level"><a href="#c-formulaire-de-reservation">c) Formulaire de réservation</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="documentation-coworking">Documentation - Coworking</h1>
+<p>Cette documentation a pour but de présenter le projet de CoWorking de l'entreprise Initiative Pays d'Arles,        <br />
+ses intervenants, les problèmes posés et aussi les solutions proposées.</p>
+<p>Elle explique clairement chaque point du projet sans être trop technique pour que même un non initié à l'informatique puisse comprendre.</p>
+<p><img alt="Init_Arles" src="docs_img/init_arles.jpg" /></p>
+<h1 id="i-presentation-du-projet">I.  Présentation du projet</h1>
+<p>Initiative Pays d'Arles est une entreprise qui propose un dispositif d’accompagnement et de financement destiné aux porteurs 
+de projet souhaitant créer une entreprise.      <br />
+Dans le cadre de la construction de son espace de Coworking, Initiative Pays d'Arles souhaite mettre en place
+des outils de suivi, de gestion et de communication de ces activités.             </p>
+<p>Le travail du groupe est d'analyser le besoin, proposer des solutions, les valider selon une
+priorité à mettre en place, stabiliser le système de ces applications et les tableaux de bords.</p>
+<h1 id="ii-les-etudiants-travaillant-sur-le-projet">II. Les étudiants travaillant sur le projet</h1>
+<ul>
+<li><code>Baptiste Marmier</code></li>
+<li><code>Pierre Roman</code></li>
+<li><code>Maxime Dupont</code></li>
+<li><code>Sebastien Carreno</code></li>
+<li><code>Adrien Durouge</code></li>
+<li><code>Axel Pilato</code></li>
+</ul>
+<h1 id="iii-les-langages-utilises">III. Les langages utilisés</h1>
+<ul>
+<li>HTML - CSS</li>
+<li>JavaScript</li>
+<li>PHP - MySQL</li>
+</ul>
+<h1 id="iv-les-fonctionnalites-attendu">IV.  Les fonctionnalités attendu</h1>
+<table>
+<thead>
+<tr>
+<th>Fonctionnalités</th>
+<th>Priorité</th>
+<th>Complexité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accèder à la présentation</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Visualiser les partenaires</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Visualiser en 3D les espaces</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Achat nombre de crédits</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Forfait 3 mois</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Contact</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Forfait 6 mois</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Forfait 12 mois</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Agenda des événements public</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Agenda réservation</td>
+<td>3</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Accès à l'annuaire des membres</td>
+<td>3</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Accès aux événements privé</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Accès aux petites annonces</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Ajouter des espaces</td>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Ajouter des forfaits</td>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="v-lapi">V. L'API</h1>
+<p>Pour réaliser toutes les fonctionnalités attendues sur le site, nous avons pensé à réaliser une API en json.    </p>
+<p>API est l'acronyme d'Application Programming Interface, que l'on traduit en français par interface de programmation d'application.         <br />
+L'API peut être résumée à une solution informatique qui permet à des applications de communiquer entre elles et de s'échanger mutuellement des services ou des données.    <br />
+Il s'agit en réalité d'un ensemble de fonctions qui facilitent l'accès aux services d'une application.             </p>
+<h3 id="a-les-differentes-routes-de-lapi"><strong>a) Les différentes routes de l'API</strong></h3>
+<p>La table de routage est indispensable à la navigation sur le site et permet une meilleure sécurité.      </p>
+<p>Chaque route permet d'accéder à une fonctionnalité différente.</p>
+<pre><code>apiRouter.route('/users/register/').post(cUser.register);       // S'enregistrer
+apiRouter.route('/users/login/').post(cUser.login);             // Se connecter
+apiRouter.route('/users/info/').get(cUser.getUserProfile);      // Récuperer infos utilisateurs
+apiRouter.route('/users/search').get(CUsers.search);            // Rechercher un utilisateur
+apiRouter.route('/users/info/update/nom').put(cUser.updateNom); // Modifier le nom d'un utilisateur
+apiRouter.route('/users/delete').delete(CUsers.delete);         // Supprimer un utilisateur
+</code></pre>
+
+<h3 id="b-extrait-de-code-de-lapi"><strong>b) Extrait de code de l'API</strong></h3>
+<p>Ceci est un extrait de la fonction "register" qui va permettre à un utilisateur de se créer un compte.</p>
+<pre><code>register: function (req, res) {
+//valeurs
+var nom = req.body.nom;
+var prenom = req.body.prenom;
+var email = req.body.email;
+var password =req.body.password;
+var categorie = 1;
+
+    //gestion des erreurs de paramètre manquant
+    if (nom == null) {
+        return res.status(400).json({'error': 'nom manquant'});
+    }
+    if (prenom == null){
+        return res.status(400).json({'error': 'prenom manquant'});
+    }
+    if (email == null){
+        return res.status(400).json({'error': 'email manquant'});
+    }
+    if (password == null){
+        return res.status(400).json({'error': 'mot de passe manquant'});
+    }
+
+    if(nom.length &gt;= 50 || nom.length &lt;= 1){
+        return res.status(400).json({'error': 'le nom doit être compris entre 2 et 50 caractères'});
+    }
+    if(prenom.length &gt;= 25 || prenom.length &lt;= 2){
+        return res.status(400).json({'error': 'le nom doit être compris entre 3 et 25 caractères'});
+    }
+    if (!EMAIL_REGEX.test(email)){
+        return res.status(400).json({'error': 'email invalide'});
+    }
+    if (!PASSWORD_REGEX.test(password)){
+        return res.status(400).json({'error': 'le mot de passe doit être compris entre 4 et 11 caractère et pocèder au moins 1 caractère numérique'});
+    }
+
+    //gestion d'utilisateur existant
+    models.User.findOne({
+        attributes: ['email'],
+        where: { email: email}
+    }).then(function(userFound){
+        if (!userFound){
+            bcryptjs.genSalt(10, function(err, salt) {
+                bcryptjs.hash(password, salt, function(err, hash) {
+                    var newUser = models.User.create({
+                        nom: nom,
+                        prenom : prenom,
+                        email: email,
+                        password: hash,
+                        idCat: categorie
+                    }).then(function (newUser) {
+                        return res.status(201).json({'id': newUser.id});
+                    }).catch(function (err) {
+                        return res.status(500).json({'error': 'impossible d\'add l\'utilisateur'});
+                    });
+                });
+            })
+        }
+        else
+            return res.status(409).json({'error': 'l\'utilisateur existe déjà'});
+
+    }).catch(function (err) {
+            return res.status(500).json({'error': 'impossible de check si l\'user existe ' + err});
+        });
+}
+</code></pre>
+
+<h3 id="c-les-codes-de-type-de-droit"><strong>c) Les codes de type de droit</strong></h3>
+<p>Chaque type d'utilisateurs sera associés à plusieurs types de droit limitant ou non leurs accès.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Libélle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>000 - 999</td>
+<td>Modification</td>
+</tr>
+<tr>
+<td>001</td>
+<td>Modifier la réservation des utilisateur avec une accreditation inferieur</td>
+</tr>
+<tr>
+<td>002</td>
+<td>Modifier la réservation detous les autres utilisateurs</td>
+</tr>
+<tr>
+<td>010</td>
+<td>Modifier ses propres évenements</td>
+</tr>
+<tr>
+<td>011</td>
+<td>Modifier les évenements des utilisateurs qui ont une accreditation inferieur</td>
+</tr>
+<tr>
+<td>012</td>
+<td>Modifier les évenements de tous les autres utilisateurs</td>
+</tr>
+<tr>
+<td>022</td>
+<td>Modifier tous les lieux</td>
+</tr>
+<tr>
+<td>030</td>
+<td>Modifier son propre profil utilisateur</td>
+</tr>
+<tr>
+<td>031</td>
+<td>Modifier le profil des utilisateurs qui ont un niveau d'accreditation inférieur au siens</td>
+</tr>
+<tr>
+<td>032</td>
+<td>Modifier tous les profils des utilisateurs</td>
+</tr>
+<tr>
+<td>040</td>
+<td>Modifier ses propres achats</td>
+</tr>
+<tr>
+<td>041</td>
+<td>Modifier les achats des utilisateur qui ont un niveau d'accreditation inférieur au siens</td>
+</tr>
+<tr>
+<td>042</td>
+<td>Modifier les achats de tous les utilisateurs</td>
+</tr>
+<tr>
+<td>052</td>
+<td>Modifier tous les forfaits</td>
+</tr>
+<tr>
+<td>062</td>
+<td>Modifier toutes les categories</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1000 - 1999</td>
+<td>Création</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>Création de sa réservation</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>Création des réservations des utilisateurs avec un niveau d'accreditation inferieur</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>Création des réservations de tous les utilisateurs</td>
+</tr>
+<tr>
+<td>1012</td>
+<td>Création d'evenement</td>
+</tr>
+<tr>
+<td>1022</td>
+<td>Créaton de lieu</td>
+</tr>
+<tr>
+<td>1040</td>
+<td>Acheter des credits pour soi</td>
+</tr>
+<tr>
+<td>1041</td>
+<td>Acheter des crédits pour ceux dont l'accreditation est inferieur à la siennes</td>
+</tr>
+<tr>
+<td>1042</td>
+<td>Acheter des crédits pour nimporte quel utilisateur</td>
+</tr>
+<tr>
+<td>1052</td>
+<td>Création de forfaits</td>
+</tr>
+<tr>
+<td>1062</td>
+<td>Création de catégorie</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2000 - 2999</td>
+<td>Suppression</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>Suppression de ses propres réservations</td>
+</tr>
+<tr>
+<td>2001</td>
+<td>Suppression des réservations des utilisateurs ayant une accréditation inferieur à la sienne</td>
+</tr>
+<tr>
+<td>2002</td>
+<td>Suppression des réservations de tous utilisateurs</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>Suppression de ses propres évènements</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>Suppression des évènements des utilisateurs dont l'accréditation est inferieur à la siennes</td>
+</tr>
+<tr>
+<td>2012</td>
+<td>Suppression des évènements de tous les utilisateurs</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>Suppression des lieux</td>
+</tr>
+<tr>
+<td>2030</td>
+<td>Supprimer son profil utilisateur</td>
+</tr>
+<tr>
+<td>2031</td>
+<td>Supprimer le profil des utilisateurs dont l'accreditation est inferieur à la sienne</td>
+</tr>
+<tr>
+<td>2032</td>
+<td>Supprimer le profil de nimporte quel utilisateur</td>
+</tr>
+<tr>
+<td>2040</td>
+<td>Suppression de ses propres achats</td>
+</tr>
+<tr>
+<td>2041</td>
+<td>Suppression des achats des utilisateur dont l'accreditation est inferieur à la siennes</td>
+</tr>
+<tr>
+<td>2042</td>
+<td>Suppression des achats de nimporte quel utilisateur</td>
+</tr>
+<tr>
+<td>2052</td>
+<td>Suppression de forfaits</td>
+</tr>
+<tr>
+<td>2061</td>
+<td>Suppression de categorie dont l'accreditation est inferieur à son accréditation</td>
+</tr>
+<tr>
+<td>2062</td>
+<td>Suppression de categorie</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="vi-base-de-donnees">VI. Base de Données</h1>
+<p><img alt="BDD" src="docs_img/bdd_cowork.png" /></p>
+<p>La base de données est un point central dans la création et la gestion du site car elle va permettre de stocker toutes les informations nécessaires au bon fonctionnement du site et elle permet aussi l'expansion pour des modifications futures.</p>
+<p>Cette base de données contient 12 tables.</p>
+<table>
+<thead>
+<tr>
+<th>Nom de la table</th>
+<th>Fonctionnalités</th>
+<th>Exemple contenu d'une table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User</td>
+<td>Informations relative à un utilisateur</td>
+<td>(nom, prenom, ville, mdp, image, etc.)</td>
+</tr>
+<tr>
+<td>Categorie</td>
+<td>Permet de savoir le type de chaque utilisateur</td>
+<td>(coworker, administrateur)</td>
+</tr>
+<tr>
+<td>Droit</td>
+<td>Associe chaque catégorie d'utilisateurs à des types de droit pré-enregistrer</td>
+<td>(admin : [2062; 1022; 1062; etc.])</td>
+</tr>
+<tr>
+<td>TypeDroit</td>
+<td>Contient tous les types de droit</td>
+<td>(déjà vu plus haut)</td>
+</tr>
+<tr>
+<td>Achat</td>
+<td>Permet de gerer l'achat de forfait pour les utilisateurs</td>
+<td></td>
+</tr>
+<tr>
+<td>Forfait</td>
+<td>Informations relative à un forfait</td>
+<td>(nombre de crédits, prix, nom, etc.)</td>
+</tr>
+<tr>
+<td>Reservation</td>
+<td>Informations nécessaire pour réserver</td>
+<td>(date de début, date de fin, l'utilisateur, etc.)</td>
+</tr>
+<tr>
+<td>Lieu</td>
+<td>Informations relative à un lieu</td>
+<td>(prix, description)</td>
+</tr>
+<tr>
+<td>LieuEvent</td>
+<td>Associe un lieu à un évenement</td>
+<td>(date, heure, lieu et evenement)</td>
+</tr>
+<tr>
+<td>Evenement</td>
+<td>Informations nécessaire pour un évenement</td>
+<td>(adresse, description)</td>
+</tr>
+<tr>
+<td>Participation</td>
+<td>Associe un utilisateur à un évenement pour montrer sa participation</td>
+<td></td>
+</tr>
+<tr>
+<td>Partenaire</td>
+<td>Informations relative à un partenaire</td>
+<td>(nom, URL site, logo, etc.)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="vii-page-daccueil">VII. Page d'accueil</h1>
+<p>Ceci sont des exemples de pages web possible pour le site web de coworking.    </p>
+<p>Les pages ont était réalisé grâce au Framework "Angular" développé par Google, qui permet de réaliser des pages web dynamiques et mieux optimisés.       <br />
+Le site web est réalisé en "Responsive", c'est-à-dire que le site s'adapte à la taille de l'écran ainsi qu'aux mobiles, tablettes et télévisions 
+avec le même confort visuel.</p>
+<h3 id="a-version-ordinateur"><strong>a) Version ordinateur</strong></h3>
+<p>Page d'accueil du site de CoWorking résumant le principe, l'histoire de la ville, le lieu ainsi qu'un footer regroupant toutes les informations, 
+réseaux pour contacter l'entreprise.</p>
+<p><img alt="Index_1" src="docs_img/angular/index_1.png" /></p>
+<p><img alt="Index_2" src="docs_img/angular/index_2.png" /></p>
+<p><img alt="Index_3" src="docs_img/angular/index_3.png" /></p>
+<h3 id="b-version-mobile"><strong>b) Version mobile</strong></h3>
+<p>Même chose que précedemment mais en version mobile avec les images adaptée et optimisé pour tous les types d'écrans, petit ou grand.</p>
+<p><img alt="Index_resp_1" src="docs_img/angular/index_resp_1.png" /></p>
+<p><img alt="Index_resp_2" src="docs_img/angular/index_resp_2.png" /></p>
+<h3 id="c-page-de-connectioncreation"><strong>c) Page de connection/création</strong></h3>
+<p>Page de connection pour les adhérents possèdant déjà un compte.    <br />
+Il leur suffit de s'authentifier via l'adresse email et le mot de passe qu'ils ont défini lors de la création de leur compte.</p>
+<p><img alt="Connec_1" src="docs_img/angular/connex1.png" /></p>
+<p>Page de création du compte adhérent nécessitant uniquement les informations obligatoires.   <br />
+Le mot de passe n'a pour l'instant aucune condition particulière mais ceci peut être modifié très simplement.      </p>
+<p><img alt="Connec_2" src="docs_img/angular/connex2.png" /></p>
+<h3 id="d-espace-personnel-des-adherents"><strong>d) Espace personnel des adhérents</strong></h3>
+<p>Userboard ou espace personnel de chaque utilisateur depuis celui-ci chaque utilisateur peut : </p>
+<ul>
+<li>
+<p>Gérer ses crédits  (voir les fonds de son porte-monnaie et ajouter des fonds) </p>
+</li>
+<li>
+<p>Accéder à l'agenda (voir les salles réserver ou en réserver, consulter les événements)</p>
+</li>
+<li>
+<p>Accéder à un annuaire des membres         </p>
+</li>
+</ul>
+<p><img alt="userboard1" src="docs_img/angular/userboard1.png" />           </p>
+<p>Même chose que précédemment mais en version mobile.</p>
+<p><img alt="userboard_resp1" src="docs_img/angular/userboard_resp1.png" /></p>
+<p><img alt="userboard_resp2" src="docs_img/angular/userboard_resp2.png" /></p>
+<p><img alt="userboard_resp3" src="docs_img/angular/userboard_resp3.png" /></p>
+<h3 id="e-extrait-de-code"><strong>e) Extrait de code</strong></h3>
+<p><strong>app.module.ts</strong>       </p>
+<pre><code>//import des modules
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { UserSpaceComponent } from './user-space/user-space.component';
+import {RouterModule, Routes} from '@angular/router'
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    UserSpaceComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: 'login', component:LoginComponent}
+    ])
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+</code></pre>
+
+<p><strong>index.html</strong></p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;CoWorkArles&lt;/title&gt;
+  &lt;base href=&quot;/&quot;&gt;
+
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;link rel=&quot;icon&quot; href=&quot;assets/arles.png&quot; /&gt;
+
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;app-root&gt;&lt;/app-root&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="f-liste-des-modules"><strong>f) Liste des modules</strong></h3>
+<p><img alt="List_modul1" src="docs_img/angular/list_modul1.png" /></p>
+<h1 id="viii-calendrier">VIII. Calendrier</h1>
+<p>Réaliser un calendrier était très important dans ce projet car c'est autour de lui que va se mettre en place toute l'organisation de l'espace Coworking.</p>
+<p>Le calendrier a diverses fonctionnalités qui changent selon les types d'utilisateurs.</p>
+<h3 id="a-adherents"><strong>a) Adhérents</strong></h3>
+<p>Les adhérents peuvent consulter le calendrier pour voir les réservations et les événements.   <br />
+Ils peuvent aussi réserver des salles ou des bureaux en cliquant sur une case vide et en complétant un formulaire de réservations.</p>
+<p>Les réservations se font par quart d'heure.</p>
+<p><img alt="Cal1_visit" src="docs_img/calendrier/cal1_visit.png" /></p>
+<p>Chaque adhérent peut cliquer sur une date d'événement pour avoir accès à de multiples informations telles que : la date et l'heure, le titre, la description ainsi que le lieu.</p>
+<p><img alt="Cal2_visit" src="docs_img/calendrier/cal2_visit.png" /></p>
+<p><img alt="Cal3_visit" src="docs_img/calendrier/cal3_visit.png" /></p>
+<h3 id="b-administrateurs"><strong>b) Administrateurs</strong></h3>
+<p><img alt="Cal1_admin" src="docs_img/calendrier/cal1_admin.png" /></p>
+<p><img alt="Cal2_admin" src="docs_img/calendrier/cal2_admin.png" /></p>
+<p><img alt="Cal3_admin" src="docs_img/calendrier/cal3_admin.png" /></p>
+<h3 id="c-formulaire-de-reservation"><strong>c) Formulaire de réservation</strong></h3>
+<p><img alt="Cal4_admin" src="docs_img/calendrier/cal4_admin.png" /></p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '.';
+    </script>
+    <script src="js/base.js"></script>
+    <script src="search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-03-04 11:32:25
+-->
