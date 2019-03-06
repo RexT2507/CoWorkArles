@@ -9,15 +9,11 @@ module.exports = (sequelize, DataTypes) => {
   Reservation.associate = function(models) {
     // associations can be defined here
       models.Reservation.belongsTo(models.User, {
-          foreignKey:{
-              allowNull: false,
-          }
+          foreignKey:'id'
       });
 
       models.Reservation.belongsTo(models.Lieu, {
-          foreignKey:{
-              allowNull: false,
-          }
+          foreignKey:'id'
       })
   };
   return Reservation;

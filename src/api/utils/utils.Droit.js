@@ -15,14 +15,16 @@ module.exports = {
         if (categorieId == null || !categorieId) {
             return false;
         }
-        models.Droit.findOne({
+        var result;
+        await models.Droit.findOne({
             attributes: ['idCat'],
             where: {idCat: categorieId, numeroDroit: typeDroitId}
         }).then(function (droitFound){
-            return !!droitFound;
-        })
+            result = !!droitFound;
+        });
+        return result;
     },
-    addDroit: function (categorieId, numeroTypeDroit) {
+    addDroit: async function (categorieId, numeroTypeDroit) {
         var newDroit = models.Droit.create({
             idCat: categorieId,
             numeroDroit : numeroTypeDroit
@@ -32,6 +34,5 @@ module.exports = {
             console.log("bonjour");
             return false;
         })
-        return newDroit;
     }
 }
