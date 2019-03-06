@@ -1,6 +1,7 @@
 //Imports
 var bcryptjs = require('bcryptjs');
 var jwtUtils = require('../utils/utils.Auth');
+var creditUtils = require('../utils/utils.credit');
 var models = require('../models');
 const Sequelize = require('sequelize');
 
@@ -206,7 +207,21 @@ module.exports ={
             return res.status(500).json({'error': 'incapable de vérifier l\'utilisateur'});
         });
     },
+    getMyCredit: function (req, res) {
+        //check le token
+        var headerAuth = req.headers['authorization'];
+        var userId = jwtUtils.getUserId(headerAuth);
 
+        if (userId < 0 || typeof(userId) !== 'number')
+            return res.status(400).json({'error': 'mauvais token'});
+
+        creditUtils.getCredit(userId).then(function (nbrCredit){
+            console.log(nbrCredit + " 2");
+            return res.status(200).json({'credits': nbrCredit});
+        }).catch(function (err) {
+            return res.status(500).json({'error': err});
+        })
+    },
     delete: function (req, res) {
         //check le token
         var headerAuth = req.headers['authorization'];

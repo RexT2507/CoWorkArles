@@ -26,20 +26,12 @@ module.exports ={
                     libelle: libelle,
                     accreditation: accreditation
                 }).then(function (newCategorie) {
-                    var listNonAdd = [];
-                    for(var i= 0; i < droits.length; i++)
-                    {
-                        console.log(UtilsDroit.addDroit(newCategorie.id, droits[i]));
-                        /*if (!UtilsDroit.addDroit(newCategorie.id, droits[i])){
-                            listNonAdd.push(droits[i]);
-                        }*/
-                    }
-                    if (listNonAdd.length > 0){
-                        return res.status(500).json({'error': 'impossible d\'ajouter les droits suivants : ' + listNonAdd});
+                    for(var i= 0; i < droits.length; i++) {
+                        UtilsDroit.addDroit(newCategorie.id, droits[i]); // erreur pas traité
                     }
                     return res.status(201).json({'id': newCategorie.id});
                 }).catch(function (err) {
-                    return res.status(500).json({'error': 'impossible d\'ajouter la categorie'});
+                    return res.status(500).json({'error': 'impossible d\'ajouter la categorie' + err});
                 });
             }
             else
