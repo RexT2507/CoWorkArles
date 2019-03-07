@@ -81,11 +81,13 @@
         <li class="first-level "><a href="#iii-les-langages-utilises">III. Les langages utilisés</a></li>
         <li class="first-level "><a href="#iv-les-fonctionnalites-attendu">IV.  Les fonctionnalités attendu</a></li>
         <li class="first-level "><a href="#v-lapi">V. L'API</a></li>
-            <li class="second-level"><a href="#a-les-differentes-routes-de-lapi">a) Les différentes routes de l'API</a></li>
+            <li class="second-level"><a href="#a-les-routes-et-les-fonctions-de-lapi">a) Les routes et les fonctions de l'API</a></li>
                 
             <li class="second-level"><a href="#b-extrait-de-code-de-lapi">b) Extrait de code de l'API</a></li>
                 
             <li class="second-level"><a href="#c-les-codes-de-type-de-droit">c) Les codes de type de droit</a></li>
+                
+            <li class="second-level"><a href="#d-les-codes-derreur">d) Les codes d'erreur</a></li>
                 
         <li class="first-level "><a href="#vi-base-de-donnees">VI. Base de Données</a></li>
         <li class="first-level "><a href="#vii-page-daccueil">VII. Page d'accueil</a></li>
@@ -236,17 +238,106 @@ priorité à mettre en place, stabiliser le système de ces applications et les 
 <p>API est l'acronyme d'Application Programming Interface, que l'on traduit en français par interface de programmation d'application.         <br />
 L'API peut être résumée à une solution informatique qui permet à des applications de communiquer entre elles et de s'échanger mutuellement des services ou des données.    <br />
 Il s'agit en réalité d'un ensemble de fonctions qui facilitent l'accès aux services d'une application.             </p>
-<h3 id="a-les-differentes-routes-de-lapi"><strong>a) Les différentes routes de l'API</strong></h3>
+<h3 id="a-les-routes-et-les-fonctions-de-lapi"><strong>a) Les routes et les fonctions de l'API</strong></h3>
 <p>La table de routage est indispensable à la navigation sur le site et permet une meilleure sécurité.      </p>
 <p>Chaque route permet d'accéder à une fonctionnalité différente.</p>
-<pre><code>apiRouter.route('/users/register/').post(cUser.register);       // S'enregistrer
-apiRouter.route('/users/login/').post(cUser.login);             // Se connecter
-apiRouter.route('/users/info/').get(cUser.getUserProfile);      // Récuperer infos utilisateurs
-apiRouter.route('/users/search').get(CUsers.search);            // Rechercher un utilisateur
-apiRouter.route('/users/info/update/nom').put(cUser.updateNom); // Modifier le nom d'un utilisateur
-apiRouter.route('/users/delete').delete(CUsers.delete);         // Supprimer un utilisateur
-</code></pre>
-
+<table>
+<thead>
+<tr>
+<th>Routes</th>
+<th>Paramètres</th>
+<th>Valeurs Retourné</th>
+<th>Description</th>
+<th>Token requis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/users/register/</td>
+<td>nom, prenom, email, password, (image), adresse, ville, tel</td>
+<td>{'id':id de l'utilisateur}</td>
+<td>S'enregistrer</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>/users/login/</td>
+<td>email, password</td>
+<td>{'userId':userId, 'token':token}</td>
+<td>Se connecter</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>/users/info/</td>
+<td></td>
+<td>{'email:email, 'nom':nom, 'prenom':prenom, 'adresse':adresse, 'ville':ville,'tel':tel, 'idCat':idCat, 'id':id}</td>
+<td>Recuperer infos utilisateurs</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>/users/search</td>
+<td>recherche, (limit), (offset), (order)</td>
+<td>Pour chaque utilisateurs trouvé, renvoie ses infos execpté 'idCat'</td>
+<td>Rechercher des utilisateurs</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>/users/info/update/nom</td>
+<td>nom</td>
+<td>renvoie toute les informations</td>
+<td>Modifier le nom utilisateur</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>/users/delete</td>
+<td>id</td>
+<td>{'succesful':'utilisateur supprimé'}</td>
+<td>Supprimer un utilisateur</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>/categorie/info/droits</td>
+<td>idCat</td>
+<td></td>
+<td>Recupere tous les droits d'une categorie</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>/categorie/create</td>
+<td>libelle, accreditation, tableau de droit</td>
+<td>{'id':idCat}</td>
+<td>Ajouter une categorie</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>/lieu/ajouter</td>
+<td>libelle, prix</td>
+<td>{'id':idLieu}</td>
+<td>Ajouter un lieu</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>/lieu/search</td>
+<td>recherche, (limit), (offset), (order)</td>
+<td>Pour chaque lieux trouvé, renvoie le libelle et le prix</td>
+<td>Rechercher des lieux</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>/reservation/reserver</td>
+<td>dateDeb, dateFin, idLieu</td>
+<td>{'id':idReserv}</td>
+<td>Creer une reservation</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id="b-extrait-de-code-de-lapi"><strong>b) Extrait de code de l'API</strong></h3>
 <p>Ceci est un extrait de la fonction "register" qui va permettre à un utilisateur de se créer un compte.</p>
 <pre><code>register: function (req, res) {
@@ -511,6 +602,7 @@ var categorie = 1;
 </tr>
 </tbody>
 </table>
+<h3 id="d-les-codes-derreur"><strong>d) Les codes d'erreur</strong></h3>
 <h1 id="vi-base-de-donnees">VI. Base de Données</h1>
 <p><img alt="BDD" src="docs_img/bdd_cowork.png" /></p>
 <p>La base de données est un point central dans la création et la gestion du site car elle va permettre de stocker toutes les informations nécessaires au bon fonctionnement du site et elle permet aussi l'expansion pour des modifications futures.</p>
@@ -603,9 +695,9 @@ réseaux pour contacter l'entreprise.</p>
 <p><img alt="Index_2" src="docs_img/angular/index_2.png" /></p>
 <p><img alt="Index_3" src="docs_img/angular/index_3.png" /></p>
 <h3 id="b-version-mobile"><strong>b) Version mobile</strong></h3>
-<p>Même chose que précedemment mais en version mobile avec les images adaptée et optimisé pour tous les types d'écrans, petit ou grand.</p>
-<p><img alt="Index_resp_1" src="docs_img/angular/index_resp_1.png" /></p>
-<p><img alt="Index_resp_2" src="docs_img/angular/index_resp_2.png" /></p>
+<p>Même chose que précedemment mais en version mobile avec les images adaptée et optimisé pour tous les types d'écrans, petit ou grand.   </p>
+<p><img src='docs_img/angular/index_resp_1.png' width="50%"/>
+<img src='docs_img/angular/index_resp_2.png' width="45%"/></p>
 <h3 id="c-page-de-connectioncreation"><strong>c) Page de connection/création</strong></h3>
 <p>Page de connection pour les adhérents possèdant déjà un compte.    <br />
 Il leur suffit de s'authentifier via l'adresse email et le mot de passe qu'ils ont défini lors de la création de leur compte.</p>
@@ -627,7 +719,7 @@ Le mot de passe n'a pour l'instant aucune condition particulière mais ceci peut
 </li>
 </ul>
 <p><img alt="userboard1" src="docs_img/angular/userboard1.png" />           </p>
-<p>Même chose que précédemment mais en version mobile.</p>
+<p>Même chose que précédemment mais en version mobile.    </p>
 <p><img alt="userboard_resp1" src="docs_img/angular/userboard_resp1.png" /></p>
 <p><img alt="userboard_resp2" src="docs_img/angular/userboard_resp2.png" /></p>
 <p><img alt="userboard_resp3" src="docs_img/angular/userboard_resp3.png" /></p>
@@ -756,5 +848,5 @@ Ils peuvent aussi réserver des salles ou des bureaux en cliquant sur une case v
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-03-05 12:34:45
+Build Date UTC : 2019-03-07 11:33:34
 -->

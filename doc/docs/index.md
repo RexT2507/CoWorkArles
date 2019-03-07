@@ -57,7 +57,6 @@ priorité à mettre en place, stabiliser le système de ces applications et les 
 ||| 
 
 
-
 # V. L'API
 
 Pour réaliser toutes les fonctionnalités attendues sur le site, nous avons pensé à réaliser une API en json.    
@@ -65,21 +64,28 @@ Pour réaliser toutes les fonctionnalités attendues sur le site, nous avons pen
 API est l'acronyme d'Application Programming Interface, que l'on traduit en français par interface de programmation d'application.           
 L'API peut être résumée à une solution informatique qui permet à des applications de communiquer entre elles et de s'échanger mutuellement des services ou des données.      
 Il s'agit en réalité d'un ensemble de fonctions qui facilitent l'accès aux services d'une application.             
-                
-###**a) Les différentes routes de l'API**
+                           
+###**a) Les routes et les fonctions de l'API**
 
 La table de routage est indispensable à la navigation sur le site et permet une meilleure sécurité.      
        
 Chaque route permet d'accéder à une fonctionnalité différente.
 
-````
-apiRouter.route('/users/register/').post(cUser.register);       // S'enregistrer
-apiRouter.route('/users/login/').post(cUser.login);             // Se connecter
-apiRouter.route('/users/info/').get(cUser.getUserProfile);      // Récuperer infos utilisateurs
-apiRouter.route('/users/search').get(CUsers.search);            // Rechercher un utilisateur
-apiRouter.route('/users/info/update/nom').put(cUser.updateNom); // Modifier le nom d'un utilisateur
-apiRouter.route('/users/delete').delete(CUsers.delete);         // Supprimer un utilisateur
-````           
+
+| Routes         |  Paramètres                                                | Valeurs Retourné                            | Description      | Token requis   |
+|----------------|------------------------------------------------------------|---------------------------------------------|------------------|----------------|
+|/users/register/| nom, prenom, email, password, (image), adresse, ville, tel | {'id':id de l'utilisateur}                  | S'enregistrer    | Non |
+|/users/login/   | email, password                                            | {'userId':userId, 'token':token}            | Se connecter     | Non |
+|/users/info/ || {'email:email, 'nom':nom, 'prenom':prenom, 'adresse':adresse, 'ville':ville,'tel':tel, 'idCat':idCat, 'id':id} | Recuperer infos utilisateurs | Oui |
+|/users/search | recherche, (limit), (offset), (order) | Pour chaque utilisateurs trouvé, renvoie ses infos execpté 'idCat'| Rechercher des utilisateurs | Oui |
+|/users/info/update/nom | nom  | renvoie toute les informations    | Modifier le nom utilisateur                                               | Oui |
+|/users/delete   | id   | {'succesful':'utilisateur supprimé'}     | Supprimer un utilisateur                                                  | Oui |
+|/categorie/info/droits | idCat | | Recupere tous les droits d'une categorie                                                                   | Oui |    
+|/categorie/create      | libelle, accreditation, tableau de droit | {'id':idCat}  | Ajouter une categorie                                     | Oui |
+|/lieu/ajouter     | libelle, prix | {'id':idLieu}                                 | Ajouter un lieu                                           | Oui |
+|/lieu/search      | recherche, (limit), (offset), (order)   | Pour chaque lieux trouvé, renvoie le libelle et le prix | Rechercher des lieux  | Oui |
+|/reservation/reserver | dateDeb, dateFin, idLieu | {'id':idReserv}   | Creer une reservation                                                  | Oui |      
+||||||
 
 ###**b) Extrait de code de l'API**   
 
@@ -205,6 +211,7 @@ Chaque type d'utilisateurs sera associés à plusieurs types de droit limitant o
 |    2062     | Suppression de categorie |
 |             |              |    
 
+###**d) Les codes d'erreur**
 
 
 # VI. Base de Données 
@@ -256,12 +263,10 @@ réseaux pour contacter l'entreprise.
 
 ###**b) Version mobile**
 
-Même chose que précedemment mais en version mobile avec les images adaptée et optimisé pour tous les types d'écrans, petit ou grand.
+Même chose que précedemment mais en version mobile avec les images adaptée et optimisé pour tous les types d'écrans, petit ou grand.   
 
-![Index_resp_1](docs_img/angular/index_resp_1.png)
-
-![Index_resp_2](docs_img/angular/index_resp_2.png)
-
+<img src='docs_img/angular/index_resp_1.png' width="50%"/>
+<img src='docs_img/angular/index_resp_2.png' width="45%"/>
 
 ###**c) Page de connection/création**
 
@@ -288,7 +293,7 @@ Userboard ou espace personnel de chaque utilisateur depuis celui-ci chaque utili
                   
 ![userboard1](docs_img/angular/userboard1.png)           
        
-Même chose que précédemment mais en version mobile.
+Même chose que précédemment mais en version mobile.    
 
 ![userboard_resp1](docs_img/angular/userboard_resp1.png)
 
