@@ -69,7 +69,7 @@ module.exports ={
                             }
                         }).then(function (eventFound) {
                             if (!eventFound){
-                                UtilsCredit.getReservationCout(idLieu, dateDeb, dateFin).then(function (cout) {
+                                UtilsCredit.getReservationCout(idLieu, dateDeb, dateFin, new Date()).then(function (cout) {
                                     UtilsCredit.checkCredit(userId, cout).then(function (result) {
                                         console.log(result);
                                         if (result){

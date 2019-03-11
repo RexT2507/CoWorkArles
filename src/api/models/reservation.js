@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     dateDeb: DataTypes.DATE,
     dateFin: DataTypes.DATE,
     idUser: DataTypes.INTEGER,
-    idLieu: DataTypes.INTEGER
+    idLieu: DataTypes.INTEGER,
+      createdAt: DataTypes.DATE
   }, {});
   Reservation.associate = function(models) {
     // associations can be defined here

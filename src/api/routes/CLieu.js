@@ -28,6 +28,7 @@ module.exports ={
                 //valeurs
                 var libelle = req.body.libelle;
                 var prix = req.body.prix;
+                var actif = req.body.actif;
 
                 //gestion des erreurs
                 if (libelle == null){
@@ -35,6 +36,9 @@ module.exports ={
                 }
                 if (prix == null){
                     prix = 0;
+                }
+                if (actif == null){
+                    actif = false
                 }
 
                 models.Lieu.findOne({
@@ -44,7 +48,8 @@ module.exports ={
                     if (!LieuFound) {
                         models.Lieu.create({
                             libelle: libelle,
-                            prix: prix
+                            prix: prix,
+                            actif: actif
                         }).then(function (newLieu) {
                             return res.status(201).json({'id': newLieu.id});
                         }).catch(function (err) {
@@ -62,21 +67,32 @@ module.exports ={
     },
 
     search: function (req, res) {
+        //check le token
+        var headerAuth = req.headers['authorization'];
+        var userId = jwtUtils.getUserId(headerAuth);
+        var catId = jwtUtils.getCatId(headerAuth);
+
+        if (userId < 0)
+            return res.status(400).json({'error': 'mauvais token'});
+
         var recherche = req.body.recherche;
         var limit = parseInt(req.query.limit);
         var offset = parseInt(req.query.offset);
         var order = req.query.order;
 
         //recherche des lieux
+
         models.Lieu.findAll({
             order: [(order != null) ? order.split(':') : ['libelle', 'ASC']],
-            attributes: ['libelle', 'prix'],
+            attributes: ['id', 'libelle', 'prix'],
             limit: (!isNaN(limit)) ? limit : null,
             offset: (!isNaN(offset)) ? offset : null,
             where: {[OP.or]: [
                     {libelle: {[OP.like]: '%'+recherche+'%'}},
                     {prix: {[OP.like]: '%'+recherche+'%'}}
-                ]}
+                ],
+                actif: true
+            }
         }).then(function (LieuxFound) {
             if (LieuxFound){
                 res.status(200).json(LieuxFound);

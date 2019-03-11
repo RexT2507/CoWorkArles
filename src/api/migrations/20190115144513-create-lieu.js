@@ -16,8 +16,13 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.INTEGER
             },
+            actif: {
+                allowNull: false,
+                type: Sequelize.BOOLEAN
+            },
             createdAt: {
                 allowNull: false,
+                primaryKey: true,
                 type: Sequelize.DATE
             },
             updatedAt: {
