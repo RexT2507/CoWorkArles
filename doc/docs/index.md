@@ -65,7 +65,7 @@ API est l'acronyme d'Application Programming Interface, que l'on traduit en fran
 L'API peut être résumée à une solution informatique qui permet à des applications de communiquer entre elles et de s'échanger mutuellement des services ou des données.      
 Il s'agit en réalité d'un ensemble de fonctions qui facilitent l'accès aux services d'une application.             
                            
-###**a) Les routes et les fonctions de l'API**
+### **a) Les routes et les fonctions de l'API**
 
 La table de routage est indispensable à la navigation sur le site et permet une meilleure sécurité.      
        
