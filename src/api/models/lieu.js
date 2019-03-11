@@ -2,7 +2,8 @@
 module.exports = (sequelize, DataTypes) => {
   const Lieu = sequelize.define('Lieu', {
     libelle: DataTypes.STRING,
-    prix: DataTypes.INTEGER
+    prix: DataTypes.INTEGER,
+      createdAt: DataTypes.DATE
   }, {});
   Lieu.associate = function(models) {
     // associations can be defined here

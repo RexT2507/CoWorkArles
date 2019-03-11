@@ -18,7 +18,7 @@ module.exports ={
         var prenom = req.body.prenom;
         var email = req.body.email;
         var password =req.body.password;
-        var categorie = 1;
+        var categorie = 2;
 
         //gestion des erreurs de paramètre manquant
         if (nom == null) {

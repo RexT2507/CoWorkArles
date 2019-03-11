@@ -2,7 +2,8 @@
 module.exports = (sequelize, DataTypes) => {
   const Achat = sequelize.define('Achat', {
     idUser: DataTypes.INTEGER,
-    idForf: DataTypes.INTEGER
+    idForf: DataTypes.INTEGER,
+      createdAt: DataTypes.DATE
   }, {});
   Achat.associate = function(models) {
     // associations can be defined here

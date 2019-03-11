@@ -3,6 +3,14 @@ var models = require('../models');
 
 module.exports ={
     getTypeDroit: function (req, res) {
+        //check le token
+        var headerAuth = req.headers['authorization'];
+        var userId = jwtUtils.getUserId(headerAuth);
+        var catId = jwtUtils.getCatId(headerAuth);
+
+        if (userId < 0)
+            return res.status(400).json({'error': 'mauvais token'});
+
         models.TypeDroit.findOne({
             attributes: ['numero'],
             where: { numero: numero}
@@ -17,7 +25,13 @@ module.exports ={
         });
     },
     getAllDroit: function (req, res) {
+        //check le token
+        var headerAuth = req.headers['authorization'];
+        var userId = jwtUtils.getUserId(headerAuth);
+        var catId = jwtUtils.getCatId(headerAuth);
 
+        if (userId < 0)
+            return res.status(400).json({'error': 'mauvais token'});
 
         //recherche de l'utilisateur
         models.User.findOne({
