@@ -15,5 +15,5 @@ Dans le cadre de la construction de son espace de CoWorking, Initiative Pays d'A
 
 ## Langages utilisés
 + HTML - CSS
-+ JavaScript
-+ PHP - MySQL
++ JavaScript - TypeScript
++ MySQL
