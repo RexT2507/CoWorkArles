@@ -20,6 +20,10 @@ module.exports = {
         sallowNull: false,
         type: Sequelize.DOUBLE
       },
+        actif: {
+            allowNull: false,
+            type: Sequelize.BOOLEAN
+        },
       createdAt: {
         allowNull: false,
           primaryKey: true,

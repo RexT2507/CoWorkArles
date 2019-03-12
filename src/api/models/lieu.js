@@ -3,6 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const Lieu = sequelize.define('Lieu', {
     libelle: DataTypes.STRING,
     prix: DataTypes.INTEGER,
+      actif: DataTypes.BOOLEAN,
       createdAt: DataTypes.DATE
   }, {});
   Lieu.associate = function(models) {

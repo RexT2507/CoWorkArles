@@ -3,6 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const Forfait = sequelize.define('Forfait', {
     nbrCredit: DataTypes.INTEGER,
     libelle: DataTypes.STRING,
+      actif: DataTypes.BOOLEAN,
     prix: DataTypes.DOUBLE
   }, {});
   Forfait.associate = function(models) {
