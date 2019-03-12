@@ -23,7 +23,11 @@ exports.router = (function(){
     apiRouter.route('/categorie/create').post(cCategorie.createCat);
 
     apiRouter.route('/lieu/ajouter').post(cLieu.addLieu);
+    apiRouter.route('/lieu/update/cout').post(cLieu.changeCout);
     apiRouter.route('/lieu/search').get(cLieu.search);
+    apiRouter.route('/lieu/update/status').put(cLieu.changeStatus);
+    apiRouter.route('/lieu/update/libelle').put(cLieu.changeLibelle);
+
 
     apiRouter.route('/reservation/reserver').post(cReservation.Reserver);
 
