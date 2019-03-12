@@ -28,12 +28,21 @@ priorité à mettre en place, stabiliser le système de ces applications et les 
 * `Adrien Durouge`
 * `Axel Pilato`
 
-# III. Les langages utilisés
+# III. Les langages et frameworks utilisés          
+
+Les Langages :             
 
 * HTML - CSS
 * JavaScript
-* PHP - MySQL
+* MySQL         
 
+
+ Les Frameworks :
+
+ * Angular
+ * Sequelize
+ * Node.Js
+ * Express
 
 # IV.  Les fonctionnalités attendu
 
@@ -210,8 +219,6 @@ Chaque type d'utilisateurs sera associés à plusieurs types de droit limitant o
 |    2061     | Suppression de categorie dont l'accreditation est inferieur à son accréditation |
 |    2062     | Suppression de categorie |
 |             |              |    
-
-### **d) Les codes d'erreur**
 
 
 # VI. Base de Données 
@@ -404,3 +411,12 @@ Pour les réservations en dehors de l'espace, il faut compléter le même formul
 
 ![cal3_event](docs_img/calendrier/cal3_event.png)
 ![cal4_event](docs_img/calendrier/cal4_event.png)
+
+# IX.  Conclusion               
+
+Toute l'équipe de ce projet tutoré, vous remercie d'avoir lu cette documentation, en espérant qu'elle vous aura aidé dans la compréhension des choix réalisés ainsi que dans le déroulement de ce projet.
+
+Ce projet a été un réel plaisir, car le sujet était passionnant, concret et l'entreprise qui nous ont accueillis, nous a soutenue tout au long de l'année et a répondu le plus clairement possible à nos questions
+
+
+N'hésitez pas à me contacter par mail à axelpilato@gmail.com, pour plus de précisions sur ce projet ou sur la documentation. 
