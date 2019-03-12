@@ -8,14 +8,10 @@ module.exports = (sequelize, DataTypes) => {
   Achat.associate = function(models) {
     // associations can be defined here
       models.Achat.belongsTo(models.User, {
-          foreignKey:{
-              allowNull: false,
-          }
+          foreignKey:'id'
       });
       models.Achat.belongsTo(models.Forfait, {
-          foreignKey:{
-              allowNull: false,
-          }
+          foreignKey:'id'
       });
   };
   return Achat;
