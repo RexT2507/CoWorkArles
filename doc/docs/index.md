@@ -87,7 +87,7 @@ Chaque route permet d'accéder à une fonctionnalité différente.
 |/reservation/reserver | dateDeb, dateFin, idLieu | {'id':idReserv}   | Creer une reservation                                                  | Oui |      
 ||||||
 
-###**b) Extrait de code de l'API**   
+### **b) Extrait de code de l'API**   
 
 Ceci est un extrait de la fonction "register" qui va permettre à un utilisateur de se créer un compte.
 
@@ -158,7 +158,7 @@ var categorie = 1;
 }
 ````
 
-###**c) Les codes de type de droit**
+### **c) Les codes de type de droit**
 
 Chaque type d'utilisateurs sera associés à plusieurs types de droit limitant ou non leurs accès.
 
@@ -211,7 +211,7 @@ Chaque type d'utilisateurs sera associés à plusieurs types de droit limitant o
 |    2062     | Suppression de categorie |
 |             |              |    
 
-###**d) Les codes d'erreur**
+### **d) Les codes d'erreur**
 
 
 # VI. Base de Données 
@@ -248,7 +248,7 @@ Les pages ont était réalisé grâce au Framework "Angular" développé par Goo
 Le site web est réalisé en "Responsive", c'est-à-dire que le site s'adapte à la taille de l'écran ainsi qu'aux mobiles, tablettes et télévisions 
 avec le même confort visuel.
 
-###**a) Version ordinateur**
+### **a) Version ordinateur**
 
 Page d'accueil du site de CoWorking résumant le principe, l'histoire de la ville, le lieu ainsi qu'un footer regroupant toutes les informations, 
 réseaux pour contacter l'entreprise.
@@ -261,14 +261,14 @@ réseaux pour contacter l'entreprise.
 ![Index_3](docs_img/angular/index_3.png)
 
 
-###**b) Version mobile**
+### **b) Version mobile**
 
 Même chose que précedemment mais en version mobile avec les images adaptée et optimisé pour tous les types d'écrans, petit ou grand.   
 
 <img src='docs_img/angular/index_resp_1.png' width="50%"/>
 <img src='docs_img/angular/index_resp_2.png' width="45%"/>
 
-###**c) Page de connection/création**
+### **c) Page de connection/création**
 
 Page de connection pour les adhérents possèdant déjà un compte.      
 Il leur suffit de s'authentifier via l'adresse email et le mot de passe qu'ils ont défini lors de la création de leur compte.
@@ -281,7 +281,7 @@ Le mot de passe n'a pour l'instant aucune condition particulière mais ceci peut
 
 ![Connec_2](docs_img/angular/connex2.png)
 
-###**d) Espace personnel des adhérents**
+### **d) Espace personnel des adhérents**
 
 Userboard ou espace personnel de chaque utilisateur depuis celui-ci chaque utilisateur peut : 
 
@@ -301,7 +301,7 @@ Même chose que précédemment mais en version mobile.
 
 ![userboard_resp3](docs_img/angular/userboard_resp3.png)
 
-###**e) Extrait de code**
+### **e) Extrait de code**
 
 **app.module.ts**       
 
@@ -354,7 +354,7 @@ export class AppModule { }
 </html>
 ````
 
-###**f) Liste des modules**     
+### **f) Liste des modules**     
 ![List_modul1](docs_img/angular/list_modul1.png)
 
 
@@ -364,34 +364,43 @@ export class AppModule { }
 Réaliser un calendrier était très important dans ce projet car c'est autour de lui que va se mettre en place toute l'organisation de l'espace Coworking.
 
 Le calendrier a diverses fonctionnalités qui changent selon les types d'utilisateurs.
-         
-     
-###**a) Adhérents**
 
-Les adhérents peuvent consulter le calendrier pour voir les réservations et les événements.     
-Ils peuvent aussi réserver des salles ou des bureaux en cliquant sur une case vide et en complétant un formulaire de réservations.
-      
-Les réservations se font par quart d'heure.
 
-![Cal1_visit](docs_img/calendrier/cal1_visit.png)
+### **a) Accueil**     
+
+Page d'accueil du calendrier permettant de réserver ainsi que visualiser les réservations. 
+
+![cal_accueil](docs_img/calendrier/cal_accueil.png)
+
+
+### **b) Réservation**
+
+Les adhérents peuvent consulter le calendrier pour voir les réservations.
+
+![cal1_visit](docs_img/calendrier/cal1_visit.png)
+
+Un menu déroulant permet de changer la visualisation des réservations en fonction des salles possibles.
+
+![cal_choix](docs_img/calendrier/cal_choix.png)         
+
+Ils peuvent aussi réserver des salles ou des bureaux en cliquant sur une case vide et en complétant un formulaire de réservations.     
+Les réservations se font par demi d'heure.
+
+![cal2_visit](docs_img/calendrier/cal2_visit.png)
        
 
-Chaque adhérent peut cliquer sur une date d'événement pour avoir accès à de multiples informations telles que : la date et l'heure, le titre, la description ainsi que le lieu.
+### **c) Evenements**           
 
-![Cal2_visit](docs_img/calendrier/cal2_visit.png)
+Chaque adhérent peut cliquer sur une date d'événement pour avoir accès à de multiples informations telles que : la date et l'heure, le titre, la description ainsi que le lieu.             
 
-![Cal3_visit](docs_img/calendrier/cal3_visit.png)
+![cal1_event](docs_img/calendrier/cal1_event.png)           
 
+Il y'a deux types de réservation d'événements, celle à l'espace co-working et celle ailleurs.         
+Pour celle à l'espace, il suffit de remplir un petit formulaire en sélectionnant les types d'espaces réservés.                      
 
-###**b) Administrateurs**
+![cal2_event](docs_img/calendrier/cal2_event.png)               
 
-![Cal1_admin](docs_img/calendrier/cal1_admin.png)
+Pour les réservations en dehors de l'espace, il faut compléter le même formulaire puis un second pour renseigner l'adresse.          
 
-![Cal2_admin](docs_img/calendrier/cal2_admin.png)
-
-![Cal3_admin](docs_img/calendrier/cal3_admin.png)
-
-
-###**c) Formulaire de réservation**    
-
-![Cal4_admin](docs_img/calendrier/cal4_admin.png)
+![cal3_event](docs_img/calendrier/cal3_event.png)
+![cal4_event](docs_img/calendrier/cal4_event.png)
