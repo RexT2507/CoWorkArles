@@ -1,4 +1,8 @@
-site_name: Documentation - Init Pays d'Arles
+site_name: CoWorkArles
 site_description: Documentation pour le projet CoWorking 2018/2019
 site_author: Axel Pilato
+nav: 
+    - Documentation : index.md
+
 theme: cinder
+
