@@ -19,5 +19,5 @@ Dans le cadre de la construction de son espace de CoWorking, Initiative Pays d'A
 + MySQL
 
 ## Documentation complète
-+CoWorkArles/doc/docs/index.md
+https://github.com/RexT2507/CoWorkArles/blob/master/doc/docs/index.md
 
