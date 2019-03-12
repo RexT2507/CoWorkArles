@@ -20,3 +20,5 @@ Dans le cadre de la construction de son espace de CoWorking, Initiative Pays d'A
 
 
 +https://docs.microsoft.com/fr-fr/sharepoint/dev/spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx
+
++http://jamelbaz.com/tutos/integration-de-fullcalendar-avec-php-mysql
