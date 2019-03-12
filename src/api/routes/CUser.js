@@ -18,7 +18,7 @@ module.exports ={
         var prenom = req.body.prenom;
         var email = req.body.email;
         var password =req.body.password;
-        var categorie = 2;
+        var categorie = 1;
 
         //gestion des erreurs de paramètre manquant
         if (nom == null) {
@@ -216,7 +216,6 @@ module.exports ={
             return res.status(400).json({'error': 'mauvais token'});
 
         creditUtils.getCredit(userId).then(function (nbrCredit){
-            console.log(nbrCredit + " 2");
             return res.status(200).json({'credits': nbrCredit});
         }).catch(function (err) {
             return res.status(500).json({'error': err});

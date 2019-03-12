@@ -4,6 +4,8 @@ var cUser = require('./routes/CUser');
 var cCategorie = require('./routes/CCategorie');
 var cLieu = require('./routes/CLieu');
 var cReservation = require('./routes/CReservation');
+var cForfait = require('./routes/CForfait');
+var cAchat = require('./routes/CAchat');
 
 //Router
 exports.router = (function(){
@@ -30,6 +32,11 @@ exports.router = (function(){
 
 
     apiRouter.route('/reservation/reserver').post(cReservation.Reserver);
+
+    apiRouter.route('/forfait/creer').post(cForfait.addForf);
+    apiRouter.route('/forfait/update/credit').post(cForfait.changeCredit);
+
+    apiRouter.route('/achat/acheter').post(cAchat.acheter);
 
     return apiRouter;
 })();

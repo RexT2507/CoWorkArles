@@ -38,6 +38,9 @@ module.exports ={
                 if (dateFin == null){
                     return res.status(400).json({'error': 'dateFin manquant'});
                 }
+                if (idLieu == null){
+                    return res.status(400).json({'error': 'Lieu manquant'});
+                }
 
                 models.Reservation.findOne({
                     attributes: ['id'],

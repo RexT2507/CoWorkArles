@@ -6,15 +6,16 @@ const Op = Sequelize.Op;
 async function getCreditAllForf(allForf) {
     var nbrCreditAchat = 0;
     for(var i = 0; i < allForf.length; i++){
+        console.log("nombre de credit : " + nbrCreditAchat);
         await models.Forfait.max('createdAt', { where: { createdAt: { [Op.lt]: allForf[i].createdAt }, id: allForf[i].idForf } }).then(await async function (dateForf) {
-            var wait = await models.Forfait.findOne({
+            await models.Forfait.findOne({
                     attribute:['nbrCredit'],
                     where: {
                         id: allForf[i].idForf,
                         createdAt: dateForf
                     }
             }).then(await async function (creditForf) {
-                nbrCreditAchat += creditForf;
+                nbrCreditAchat += creditForf.nbrCredit;
             });
         });
     }
