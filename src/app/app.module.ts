@@ -11,6 +11,10 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserpageComponent } from './userpage/userpage.component';
 import { AnnuaireComponent } from './annuaire/annuaire.component';
+// import { HttpClient } from 'selenium-webdriver/http';
+
+// Intégration de l'API
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,8 @@ import { AnnuaireComponent } from './annuaire/annuaire.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
