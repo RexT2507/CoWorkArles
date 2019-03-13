@@ -365,7 +365,6 @@ export class AppModule { }
 ![List_modul1](docs_img/angular/list_modul1.png)
 
 
-
 # VIII. Calendrier 
 
 Réaliser un calendrier était très important dans ce projet car c'est autour de lui que va se mettre en place toute l'organisation de l'espace Coworking.
@@ -416,7 +415,4 @@ Pour les réservations en dehors de l'espace, il faut compléter le même formul
 
 Toute l'équipe de ce projet tutoré, vous remercie d'avoir lu cette documentation, en espérant qu'elle vous aura aidé dans la compréhension des choix réalisés ainsi que dans le déroulement de ce projet.
 
-Ce projet a été un réel plaisir, car le sujet était passionnant, concret et l'entreprise qui nous ont accueillis, nous a soutenue tout au long de l'année et a répondu le plus clairement possible à nos questions
-
-
-N'hésitez pas à me contacter par mail à axelpilato@gmail.com, pour plus de précisions sur ce projet ou sur la documentation. 
+N'hésitez pas à me contacter par mail à axelpilato@gmail.com, pour plus de précisions sur ce projet ou sur la documentation.
