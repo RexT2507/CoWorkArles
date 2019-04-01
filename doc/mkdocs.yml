@@ -4,5 +4,4 @@ site_author: Axel Pilato
 nav: 
     - Documentation : index.md
 
-theme: cinder
 
