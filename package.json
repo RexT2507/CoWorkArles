@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^7.2.8",
     "@angular/platform-browser-dynamic": "^7.2.8",
     "@angular/router": "^7.2.8",
+    "ajv": "^6.9.1",
     "compass-mixins": "^0.12.10",
     "core-js": "^2.6.5",
     "rxjs": "~6.3.3",
@@ -28,7 +29,7 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.12.4",
+    "@angular-devkit/build-angular": "^0.13.7",
     "@angular/cli": "^7.3.5",
     "@angular/compiler-cli": "^7.2.8",
     "@angular/language-service": "^7.2.8",
