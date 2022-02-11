@@ -21,7 +21,7 @@
     "@angular/platform-browser": "^10.0.9",
     "@angular/platform-browser-dynamic": "^10.0.9",
     "@angular/router": "^10.0.9",
-    "ajv": "^6.9.1",
+    "ajv": "^6.12.3",
     "compass-mixins": "^0.12.10",
     "core-js": "^2.6.5",
     "istanbul-reports": "^2.2.3",
